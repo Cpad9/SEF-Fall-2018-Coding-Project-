@@ -1,6 +1,5 @@
 package sample;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -89,8 +88,6 @@ public class MainMenu implements Initializable {
     @FXML
     private Label usernameFeedDisplay;
 
-    @FXML
-    private Label workoutPresetMSG;
 
     @FXML
     private ImageView pfpFeedDisplay;
@@ -103,21 +100,18 @@ public class MainMenu implements Initializable {
 
     @FXML
     private ImageView pfpFeedDisplay1;
-
-    @FXML
-    private Label nutritionlogPresetMSG;
-
     @FXML
     private Label mealDescriptionMSG;
 
     @FXML
-    private Label carbsMSG;
+    private Label workoutset;
+
 
     @FXML
-    private Label proteinMSG;
+    private Label InfoSection1;
 
     @FXML
-    private Label fatsMSG;
+    private Label InfoSection2;
 
     /***************************************************************
      /* SETTINGS TAB FXML ELEMENTS
@@ -169,14 +163,14 @@ public class MainMenu implements Initializable {
 
         if (event.getSource() == selectWorkoutButton) {
 
-            fithubAnchor.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("WorkoutSelect.fxml")));
+            fithubAnchor.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("sample/WorkoutSelect.fxml")));
 
         }
 
         else if (event.getSource() == nutritionStatsButton) {
 
             fithubAnchor.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource(
-                "NutritionStats.fxml")));
+                    "sample/NutritionStats.fxml")));
 
         }
 
@@ -189,7 +183,7 @@ public class MainMenu implements Initializable {
         else if (event.getSource() == nutritionTrackerButton) {
 
             fithubAnchor.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource(
-                "NutritionTracker.fxml")));
+                    "sample/NutritionTracker.fxml")));
         }
 
         else if (event.getSource() == signoutButton) {
@@ -197,7 +191,7 @@ public class MainMenu implements Initializable {
             stageMainMenu=(Stage) signoutButton.getScene().getWindow();
             //load up main menu FXML document
             try {
-                rootMainMenu = FXMLLoader.load(getClass().getResource("Login.fxml"));
+                rootMainMenu = FXMLLoader.load(getClass().getResource("sample/Login.fxml"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -213,7 +207,7 @@ public class MainMenu implements Initializable {
             stageMainMenu=(Stage) changeUserProfileButton.getScene().getWindow();
             //load up main menu FXML document
             try {
-                rootMainMenu = FXMLLoader.load(getClass().getResource("Profile.fxml"));
+                rootMainMenu = FXMLLoader.load(getClass().getResource("sample/Profile.fxml"));
                 new Profile().setChecker(7);
 
 
@@ -232,7 +226,7 @@ public class MainMenu implements Initializable {
             // known bug: doing this creates a copy of the entire main menu screen (tabs included))
             // This can be solved by setting the default 4-option fit hub menu into its own FXML file that is loaded
             // within the Fit hub tab's tab pane.
-            fithubAnchor.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("MainMenu.fxml")));
+            fithubAnchor.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("sample/MainMenu.fxml")));
         }
 
 

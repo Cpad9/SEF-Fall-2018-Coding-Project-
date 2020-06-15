@@ -15,7 +15,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import java.io.IOException;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -82,7 +82,7 @@ public class Login extends CreateAccount implements Initializable {
 //  get reference to the button's stage
         stage = (Stage) signupButton.getScene().getWindow();
         //load up OTHER FXML document
-        root = FXMLLoader.load(getClass().getResource("CreateAccount.fxml"));
+        root = FXMLLoader.load(getClass().getResource("sample/CreateAccount.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -98,7 +98,7 @@ public class Login extends CreateAccount implements Initializable {
 
         if (mainPasswordInfo.getText().equals(password) && CreateAccount.isValid(mainUsernameInfo.getText())) {
             stage = (Stage) loginButton.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+            root = FXMLLoader.load(getClass().getResource("sample/MainMenu.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
@@ -126,7 +126,7 @@ public class Login extends CreateAccount implements Initializable {
     public void searchUsers() {
 
         try {
-            Scanner sc = new Scanner(new File("src/sample/UserInfo.txt"));
+            Scanner sc = new Scanner(new File("sample/UserInfo.txt"));
             while (sc.hasNextLine()) {
                 String line = sc.nextLine().substring(4);
                 if (mainUsernameInfo.getText().equals(line)) {

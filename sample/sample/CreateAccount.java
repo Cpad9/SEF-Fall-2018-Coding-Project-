@@ -1,7 +1,4 @@
 package sample;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.util.Objects;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -19,10 +16,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 
 public class CreateAccount implements Initializable {
 
@@ -209,7 +202,7 @@ public class CreateAccount implements Initializable {
                     stage=(Stage) createAcctButton.getScene().getWindow();
                     //load up main menu FXML document
                     try {
-                        root = FXMLLoader.load(getClass().getResource("Profile.fxml"));
+                        root = FXMLLoader.load(getClass().getResource("sample/Profile.fxml"));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -242,7 +235,7 @@ public class CreateAccount implements Initializable {
                 stage=(Stage) cancelToLoginMain.getScene().getWindow();
                 //load up Login FXML document
                 try {
-                    root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+                    root = FXMLLoader.load(getClass().getResource("sample/Login.fxml"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

@@ -1,11 +1,6 @@
 package sample;
 
-import static sample.WorkoutSelect.WorkoutArray;
-
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -113,8 +108,6 @@ public class NutritionStats extends User implements Initializable {
         populateLineGraph();
         populateBarGraph();
 
-        lastWorkoutVal.setText( WorkoutArray.get(0));
-
     }
 
     /***************************************************************
@@ -131,11 +124,11 @@ public class NutritionStats extends User implements Initializable {
             //get reference to the button's stage
             stage=(Stage) returnToFitHub.getScene().getWindow();
             //load up OTHER FXML document
-            root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+            root = FXMLLoader.load(getClass().getResource("sample/MainMenu.fxml"));
         }
         else{
             stage=(Stage) returnToFitHub.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+            root = FXMLLoader.load(getClass().getResource("sample/MainMenu.fxml"));
         }
         //create a new scene with root and set the stage
         Scene scene = new Scene(root);

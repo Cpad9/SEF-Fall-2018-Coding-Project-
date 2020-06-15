@@ -18,7 +18,7 @@ public class Main extends Application {
 
     window = primaryStage;
 
-    Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("sample/Login.fxml"));
     primaryStage.setTitle("iCodeFit");
     primaryStage.setResizable(false);
     primaryStage.setScene(new Scene(root));

@@ -208,11 +208,11 @@ public class Profile extends CreateAccount implements Initializable {
                 try {
                     // if the user calls profile change from the main menu (once they've created an account), this will trigger;
                     if (checker == 7) {
-                        rootHere = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+                        rootHere = FXMLLoader.load(getClass().getResource("sample/MainMenu.fxml"));
                     }
 
                     else {
-                        rootHere = FXMLLoader.load(getClass().getResource("Login.fxml"));
+                        rootHere = FXMLLoader.load(getClass().getResource("sample/Login.fxml"));
                     }
 
                 } catch (IOException e) {
@@ -265,7 +265,7 @@ public class Profile extends CreateAccount implements Initializable {
                 stageHere=(Stage) finalizeAcctButton.getScene().getWindow();
                 //load up Login FXML document
                 try {
-                    rootHere = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+                    rootHere = FXMLLoader.load(getClass().getResource("sample/MainMenu.fxml"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

@@ -51,7 +51,7 @@ public class WorkoutSelect implements Initializable {
     private Label WorkoutLabel;
 
 
-    static ArrayList<String> WorkoutArray = new ArrayList<String>();
+    ArrayList<String> WorkoutArray = new ArrayList<String>();
     ArrayList<String> WorkoutArrayToUserData = new ArrayList<String>();
     String choice;
 
@@ -88,7 +88,7 @@ public class WorkoutSelect implements Initializable {
 
         if (event.getSource() == returnToFithub) {
 
-            leadWorkoutPane.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("MainMenu.fxml")));
+            leadWorkoutPane.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("sample/MainMenu.fxml")));
 
         }
     }

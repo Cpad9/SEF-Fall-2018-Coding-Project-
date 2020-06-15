@@ -10,7 +10,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.TextAlignment;
 
 import java.io.IOException;
 import java.net.URL;
@@ -104,13 +103,13 @@ public class NutritionTracker extends User implements Initializable {
 
         if (event.getSource() == updateButton && checkMacrosInput() == true) {
 
-            nutritionTrackerAnchor.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("MainMenu.fxml")));
+            nutritionTrackerAnchor.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource("sample/MainMenu.fxml")));
 
 
         } else if (event.getSource() == backToFithubButton) {
 
             nutritionTrackerAnchor.getChildren().setAll((Node) FXMLLoader.load(getClass().getResource(
-                    "MainMenu.fxml")));
+                    "sample/MainMenu.fxml")));
         }
 
     }
